@@ -1,13 +1,13 @@
 import React from 'react';
-import { View, Text, Image} from 'react-native';
+import { View, Text, Image } from 'react-native';
 
-const Greeting = (props) => {
+const TextBody = (props) => {
     const {textStyle, viewStyle} = styles;
     return (
         <View style={viewStyle}>
-            <Text style = {textStyle}>              Global              </Text>
+            <Text style = {textStyle}>          Indonesia           </Text>
             <Image
-                source={{ uri: 'https://publicdomainvectors.org/photos/LowDetailGlobe.png'}}
+                source={{ uri: 'https://publicdomainvectors.org/photos/emblem-of-indonesia.png'}}
                 style={{ width: 50, height: 50, flex: 1, flexDirection: 'row'}}
             />
         </View>
@@ -17,7 +17,7 @@ const Greeting = (props) => {
 
 const styles = {
     viewStyle: {
-        backgroundColor: 'azure',
+        backgroundColor: 'blanchedalmond',
         justifyContent: 'center',
         alignItems: 'center',
         height: 60,
@@ -32,4 +32,4 @@ const styles = {
         fontWeight: 'bold'
     }
 }
-export default Greeting;
+export default TextBody;
