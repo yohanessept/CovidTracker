@@ -5,11 +5,11 @@ const TextBody = (props) => {
     const {textStyle, viewStyle} = styles;
     return (
         <View style={viewStyle}>
-            <Text style = {textStyle}>          Indonesia           </Text>
-            <Image
-                source={{ uri: 'https://publicdomainvectors.org/photos/emblem-of-indonesia.png'}}
-                style={{ width: 50, height: 50, flex: 1, flexDirection: 'row'}}
+            <Text style = {textStyle}>INDONESIA <Image
+                source={{ uri: 'https://i.pinimg.com/originals/87/5d/80/875d8095922b780d7709927c9581a8eb.gif'}}
+                style={{resizeMode: 'contain', width: 50, height: 50}}
             />
+            </Text>
         </View>
     );
 };
@@ -17,14 +17,9 @@ const TextBody = (props) => {
 
 const styles = {
     viewStyle: {
-        backgroundColor: 'blanchedalmond',
-        justifyContent: 'center',
+        flex: 1,
         alignItems: 'center',
-        height: 60,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2},
-        shadowOpacity: 0.2,
-        elevation: 2,
+        height: 50,
         position: 'relative'
     },
     textStyle: {

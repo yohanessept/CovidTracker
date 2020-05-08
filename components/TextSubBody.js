@@ -6,6 +6,7 @@ const TextSubBody = (props) => {
     return (
         <View style={viewStyle}>
             <Text style = {textStyle}>#DiRumahAja               Provinsi              #CegahCovid19</Text>
+            <Text>Untuk info lebih lanjut kunjungi : https://covid19.go.id/</Text>
         </View>
     );
 };

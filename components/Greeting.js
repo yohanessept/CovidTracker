@@ -5,11 +5,10 @@ const Greeting = (props) => {
     const {textStyle, viewStyle} = styles;
     return (
         <View style={viewStyle}>
-            <Text style = {textStyle}>              Global              </Text>
-            <Image
+            <Text style = {textStyle}>GLOBAL <Image
                 source={{ uri: 'https://publicdomainvectors.org/photos/LowDetailGlobe.png'}}
-                style={{ width: 50, height: 50, flex: 1, flexDirection: 'row'}}
-            />
+                style={{ resizeMode: 'contain', width: 50, height: 50}}
+            /></Text>
         </View>
     );
 };
@@ -17,14 +16,9 @@ const Greeting = (props) => {
 
 const styles = {
     viewStyle: {
-        backgroundColor: 'azure',
-        justifyContent: 'center',
+        flex: 1,
         alignItems: 'center',
-        height: 60,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2},
-        shadowOpacity: 0.2,
-        elevation: 2,
+        height: 50,
         position: 'relative'
     },
     textStyle: {

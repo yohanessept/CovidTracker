@@ -39,7 +39,7 @@ class DataIndonesia extends React.Component{
                    <Text style={styles.text}> Meninggal {this.state.meninggal}</Text>
                    </View>
                    <View style={styles.box4}>
-                   <Text style={styles.text}> Perawatan {this.state.perawatan}</Text>
+                   <Text style={styles.text}> Rawat {this.state.perawatan}</Text>
                    </View>
                </View>
         )
@@ -53,24 +53,40 @@ const styles = StyleSheet.create({
         position: 'relative'
     },
     box1: {
-        width: 100,
-        height: 90,
-        backgroundColor: 'yellow'
+        flex: 1,
+        width: 90,
+        height: 70,
+        backgroundColor: 'yellow',
+        borderRadius: 20,
+        justifyContent: 'center',
+        marginHorizontal: 10
     },
     box2: {
-        width: 100,
-        height: 90,
-        backgroundColor: 'lime'
+        flex: 1,
+        width: 90,
+        height: 70,
+        backgroundColor: 'lime',
+        borderRadius: 20,
+        justifyContent: 'center',
+        marginHorizontal: 10
     },
     box3: {
-        width: 100,
-        height: 90,
-        backgroundColor: 'red'
+        flex: 1,
+        width: 90,
+        height: 70,
+        backgroundColor: 'red',
+        borderRadius: 20,
+        justifyContent: 'center',
+        marginHorizontal: 10
     },
     box4: {
-        width: 100,
-        height: 90,
-        backgroundColor: 'brown'
+        flex: 1 ,
+        width: 90,
+        height: 70,
+        backgroundColor: 'deepskyblue',
+        borderRadius: 20,
+        justifyContent: 'center',
+        marginHorizontal: 10
     },
     text: {
         color: 'black',

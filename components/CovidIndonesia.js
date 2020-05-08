@@ -45,15 +45,6 @@ render(){
         return <Text>Loading...</Text>
     }
     return (
-        <View>
-          <View style={styles.covidContainer}>
-              <Text styles={styles.text}> Positif :</Text>
-              <View style={styles.box2}></View>
-              <Text styles={styles.text}> Sembuh :</Text>
-              <View style={styles.box3}></View>
-              <Text styles={styles.text}> Meninggal :</Text>
-              <View style={styles.box4}></View>
-          </View>
           <View>
             <FlatList 
                 data={this.state.DataIndo.Data}
@@ -63,7 +54,6 @@ render(){
                 onRefresh={this.onRefresh}
             />
           </View>
-        </View>
         
     )
 }
@@ -71,24 +61,12 @@ render(){
 export default CovidIndonesia;
 
 const styles = StyleSheet.create({
-  returnContainer: {
-    flex: 1,
-    flexDirection:'row',
-    padding:5,
-    borderWidth:1,
-    backgroundColor: '#EBEBEB',
-  },
   container: {
     flex: 1,
     flexDirection:'row',
-    padding:5,
+    padding: 10,
     borderWidth:1,
     backgroundColor: 'snow',
-  },
-  covidContainer:{
-    flexDirection:'row',
-    marginTop:20,
-    marginBottom:15
   },
   text:{
     alignSelf: 'center',
@@ -104,26 +82,29 @@ const styles = StyleSheet.create({
     height:20
   },
   box2:{
-    width: 80,
+    width: 50,
     height: 20,
     alignSelf: 'center',
     marginBottom:7,
-    backgroundColor:'yellow'
+    backgroundColor:'yellow',
+    marginHorizontal: 10
   },
   box3:{
-    width:80,
+    width:50,
     height:20,
     alignSelf: 'center',
-    marginLeft:10,
+    marginLeft:30,
     marginBottom:7,
+    marginHorizontal: 10,
     backgroundColor:'lime'
   },
   box4:{
-    width:80,
+    width:50,
     height:20,
     alignSelf: 'center',
-    marginLeft:10,
+    marginLeft:40,
     marginBottom:7,
+    marginHorizontal: 10,
     backgroundColor:'red'
   },
 

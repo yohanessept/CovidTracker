@@ -1,11 +1,18 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ImageBackground, Image } from 'react-native';
 
 const Header = (props) => {
     const {textStyle, viewStyle} = styles;
     return (
         <View style={viewStyle}>
+            <ImageBackground source={{ uri: 'https://cdn.pixabay.com/photo/2016/12/17/10/27/virus-1913183_960_720.jpg'}}
+                style={{ resizeMode: 'stretch', flex: 5, justifyContent: 'center'}}>
+           <Image
+                source={{ uri: 'https://cdn.pixabay.com/photo/2017/01/31/22/06/boy-2027615_960_720.png'}}
+                style={{ resizeMode: 'contain', marginLeft: 300, paddingTop: 20, paddingBottom: 20, width: 100, height: 100}}
+            />
             <Text style = {textStyle}>Data Covid-19 Global & Indonesia</Text>
+            </ImageBackground>
         </View>
     );
 };
@@ -13,19 +20,15 @@ const Header = (props) => {
 
 const styles = {
     viewStyle: {
-        backgroundColor: 'aquamarine',
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        height: 60,
-        shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2},
-        shadowOpacity: 0.2,
-        elevation: 2,
         position: 'relative'
     },
     textStyle: {
-        fontSize: 20,
-        fontWeight: 'bold'
+        fontSize: 35,
+        fontWeight: 'bold',
+        color: 'white'
     }
 }
 export default Header;

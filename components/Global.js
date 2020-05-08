@@ -48,19 +48,31 @@ const styles = StyleSheet.create({
         position: 'relative'
     },
     box1: {
-        width: 120,
-        height: 100,
-        backgroundColor: 'yellow'
+        flex: 1,
+        width: 100,
+        height: 80,
+        backgroundColor: 'yellow',
+        borderRadius: 20,
+        justifyContent: 'center',
+        marginHorizontal: 10
     },
     box2: {
-        width: 120,
-        height: 100,
-        backgroundColor: 'lime'
+        flex: 1,
+        width: 100,
+        height: 80,
+        backgroundColor: 'lime',
+        borderRadius: 20,
+        justifyContent: 'center',
+        marginHorizontal: 10
     },
     box3: {
-        width: 120,
-        height: 100,
-        backgroundColor: 'red'
+        flex: 1,
+        width: 100,
+        height: 80,
+        backgroundColor: 'red',
+        borderRadius: 20,
+        justifyContent: 'center',
+        marginHorizontal: 10
     },
     text: {
         color: 'black',
