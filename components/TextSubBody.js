@@ -1,12 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, ImageBackground } from 'react-native';
 
 const TextSubBody = (props) => {
     const {textStyle, viewStyle} = styles;
     return (
         <View style={viewStyle}>
-            <Text style = {textStyle}>#DiRumahAja               Provinsi              #CegahCovid19</Text>
-            <Text>Untuk info lebih lanjut kunjungi : https://covid19.go.id/</Text>
+            <ImageBackground source={{ uri: 'https://dslv9ilpbe7p1.cloudfront.net/HEbWu1P0t9q8CqLA6L-urw_store_header_image'}}
+      style={{ resizeMode: 'contain', flex: 1, justifyContent: 'center'}}>
+            <Text style = {textStyle}>#DiRumahAja               PROVINSI              #CegahCovid19</Text>
+            </ImageBackground>
         </View>
     );
 };
@@ -14,7 +16,7 @@ const TextSubBody = (props) => {
 
 const styles = {
     viewStyle: {
-        backgroundColor: 'moccasin',
+        backgroundColor: 'mistyrose',
         justifyContent: 'center',
         alignItems: 'center',
         height: 60,
@@ -26,7 +28,9 @@ const styles = {
     },
     textStyle: {
         fontSize: 20,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily:'sans-serif-light',
+        color: 'black'
     }
 }
 export default TextSubBody;

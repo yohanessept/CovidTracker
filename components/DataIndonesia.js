@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet, ImageBackground} from 'react-native';
 
 class DataIndonesia extends React.Component{
     constructor(){
@@ -30,16 +30,28 @@ class DataIndonesia extends React.Component{
         return (
                    <View style={styles.container}>
                    <View style={styles.box1}>
-                       <Text style={styles.text}> Positif {this.state.positive}</Text>
+                   <ImageBackground source={{ uri: 'https://www.setaswall.com/wp-content/uploads/2017/04/Flavescent-Solid-Color-Background-Wallpaper-5120x2880-768x432.png'}}
+                style={{ resizeMode: 'contain', flex: 5, justifyContent: 'center'}}>
+                       <Text style={styles.text}> Positif: {this.state.positive} orang </Text>
+                    </ImageBackground>
                    </View>
                    <View style={styles.box2}>
-                       <Text style={styles.text}> Sembuh {this.state.sembuh}</Text>
+                   <ImageBackground source={{ uri: 'https://www.setaswall.com/wp-content/uploads/2017/04/Teal-Deer-Solid-Color-Background-Wallpaper-5120x2880-768x432.png'}}
+                style={{ resizeMode: 'contain', flex: 5, justifyContent: 'center'}}>
+                       <Text style={styles.text}> Sembuh: {this.state.sembuh} orang </Text>
+                    </ImageBackground>
                    </View>
                    <View style={styles.box3}>
-                   <Text style={styles.text}> Meninggal {this.state.meninggal}</Text>
+                   <ImageBackground source={{ uri: 'https://www.setaswall.com/wp-content/uploads/2017/04/Fuzzy-Wuzzy-Solid-Color-Background-Wallpaper-5120x2880-768x432.png'}}
+                style={{ resizeMode: 'contain', flex: 5, justifyContent: 'center'}}>
+                   <Text style={styles.text}> Meninggal: {this.state.meninggal} orang</Text>
+                   </ImageBackground>
                    </View>
                    <View style={styles.box4}>
-                   <Text style={styles.text}> Rawat {this.state.perawatan}</Text>
+                   <ImageBackground source={{ uri: 'https://www.setaswall.com/wp-content/uploads/2017/04/Manatee-Solid-Color-Background-Wallpaper-5120x2880-768x432.png'}}
+                style={{ resizeMode: 'contain', flex: 5, justifyContent: 'center'}}>
+                   <Text style={styles.text}> Perawatan: {this.state.perawatan} orang </Text>
+                   </ImageBackground>
                    </View>
                </View>
         )
@@ -48,50 +60,56 @@ class DataIndonesia extends React.Component{
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'space-between',
+        alignItems: 'stretch',
         position: 'relative'
     },
     box1: {
-        flex: 1,
-        width: 90,
+        
+        width: 300,
         height: 70,
         backgroundColor: 'yellow',
         borderRadius: 20,
         justifyContent: 'center',
+        alignItems: 'stretch',
         marginHorizontal: 10
     },
     box2: {
         flex: 1,
-        width: 90,
+        width: 300,
         height: 70,
         backgroundColor: 'lime',
         borderRadius: 20,
         justifyContent: 'center',
+        alignItems: 'stretch',
         marginHorizontal: 10
     },
     box3: {
         flex: 1,
-        width: 90,
+        width: 300,
         height: 70,
         backgroundColor: 'red',
         borderRadius: 20,
         justifyContent: 'center',
+        alignItems: 'stretch',
         marginHorizontal: 10
     },
     box4: {
         flex: 1 ,
-        width: 90,
+        width: 300,
         height: 70,
         backgroundColor: 'deepskyblue',
         borderRadius: 20,
         justifyContent: 'center',
+        alignItems: 'stretch',
         marginHorizontal: 10
     },
     text: {
         color: 'black',
         fontSize: 20,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily:'sans-serif-light'
     }
 })
 

@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import { StyleSheet, Text, View,FlatList, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View,FlatList, SafeAreaView, ImageBackground } from 'react-native';
 
 
 class CovidIndonesia extends Component{
@@ -13,10 +13,30 @@ class CovidIndonesia extends Component{
 renderItem=({item})=>
   <SafeAreaView>
     <View style={styles.container}>
-      <View style={styles.box1}><Text>{item.provinsi}</Text></View>
-      <View style={styles.box2}><Text>{item.kasusPosi}</Text></View>
-      <View style={styles.box3}><Text>{item.kasusSemb}</Text></View>
-      <View style={styles.box4}><Text>{item.kasusMeni}</Text></View>
+      <View style={styles.box1}>
+      <ImageBackground source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Flag-map_of_Indonesia_transparent.png'}}
+      style={{ resizeMode: 'contain', flex: 1, justifyContent: 'center'}}>
+        <Text>{item.provinsi}</Text>
+      </ImageBackground>
+        </View>
+      <View style={styles.box2}>
+      <ImageBackground source={{ uri: 'https://www.setaswall.com/wp-content/uploads/2017/04/Flavescent-Solid-Color-Background-Wallpaper-5120x2880-768x432.png'}}
+      style={{ resizeMode: 'contain', flex: 1, justifyContent: 'center'}}>
+        <Text>{item.kasusPosi}</Text>
+      </ImageBackground>
+      </View>
+      <View style={styles.box3}>
+      <ImageBackground source={{ uri: 'https://www.setaswall.com/wp-content/uploads/2017/04/Teal-Deer-Solid-Color-Background-Wallpaper-5120x2880-768x432.png'}}
+      style={{ resizeMode: 'contain', flex: 1, justifyContent: 'center'}}>
+        <Text>{item.kasusSemb}</Text>
+      </ImageBackground>
+      </View>
+      <View style={styles.box4}>
+      <ImageBackground source={{ uri: 'https://www.setaswall.com/wp-content/uploads/2017/04/Fuzzy-Wuzzy-Solid-Color-Background-Wallpaper-5120x2880-768x432.png'}}
+      style={{ resizeMode: 'contain', flex: 1, justifyContent: 'center'}}>
+      <Text>{item.kasusMeni}</Text>
+      </ImageBackground>
+      </View>
     </View>
   </SafeAreaView>
   
@@ -86,7 +106,6 @@ const styles = StyleSheet.create({
     height: 20,
     alignSelf: 'center',
     marginBottom:7,
-    backgroundColor:'yellow',
     marginHorizontal: 10
   },
   box3:{
@@ -95,8 +114,7 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginLeft:30,
     marginBottom:7,
-    marginHorizontal: 10,
-    backgroundColor:'lime'
+    marginHorizontal: 10
   },
   box4:{
     width:50,
@@ -104,17 +122,8 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     marginLeft:40,
     marginBottom:7,
-    marginHorizontal: 10,
-    backgroundColor:'red'
+    marginHorizontal: 10
   },
-
-  name:{
-    fontSize:20,
-    fontWeight: 'bold',
-    color: "black",
-    alignSelf: 'center',
-    margin:25
-},
 })
 
  

@@ -6,7 +6,7 @@ const Header = (props) => {
     return (
         <View style={viewStyle}>
             <ImageBackground source={{ uri: 'https://cdn.pixabay.com/photo/2016/12/17/10/27/virus-1913183_960_720.jpg'}}
-                style={{ resizeMode: 'stretch', flex: 5, justifyContent: 'center'}}>
+                style={{ resizeMode: 'contain', flex: 5, justifyContent: 'center'}}>
            <Image
                 source={{ uri: 'https://cdn.pixabay.com/photo/2017/01/31/22/06/boy-2027615_960_720.png'}}
                 style={{ resizeMode: 'contain', marginLeft: 300, paddingTop: 20, paddingBottom: 20, width: 100, height: 100}}
@@ -26,9 +26,10 @@ const styles = {
         position: 'relative'
     },
     textStyle: {
-        fontSize: 35,
+        fontSize: 40,
         fontWeight: 'bold',
-        color: 'white'
+        color: 'white',
+        fontFamily:'sans-serif-light'
     }
 }
 export default Header;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet} from 'react-native';
+import { View, Text, StyleSheet, ImageBackground} from 'react-native';
 
 class Global extends React.Component{
     constructor(){
@@ -28,13 +28,24 @@ class Global extends React.Component{
         return (
                    <View style={styles.container}>
                    <View style={styles.box1}>
-                       <Text style={styles.text}> Positif {this.state.positive}</Text>
+                   <ImageBackground source={{ uri: 'https://www.setaswall.com/wp-content/uploads/2017/04/Flavescent-Solid-Color-Background-Wallpaper-5120x2880-768x432.png'}}
+                style={{ resizeMode: 'contain', flex: 5, justifyContent: 'center'}}>
+                       <Text style={styles.text}> Total Positif: {this.state.positive} orang </Text>
+                    </ImageBackground>
                    </View>
+
                    <View style={styles.box2}>
-                       <Text style={styles.text}> Sembuh {this.state.sembuh}</Text>
+                   <ImageBackground source={{ uri: 'https://www.setaswall.com/wp-content/uploads/2017/04/Teal-Deer-Solid-Color-Background-Wallpaper-5120x2880-768x432.png'}}
+                style={{ resizeMode: 'contain', flex: 5, justifyContent: 'center'}}>
+                       <Text style={styles.text}> Total Sembuh: {this.state.sembuh} orang </Text>
+                    </ImageBackground>
                    </View>
+
                    <View style={styles.box3}>
-                   <Text style={styles.text}> Meninggal {this.state.meninggal}</Text>
+                   <ImageBackground source={{ uri: 'https://www.setaswall.com/wp-content/uploads/2017/04/Fuzzy-Wuzzy-Solid-Color-Background-Wallpaper-5120x2880-768x432.png'}}
+                style={{ resizeMode: 'contain', flex: 5, justifyContent: 'center'}}>
+                   <Text style={styles.text}> Total Meninggal: {this.state.meninggal} orang </Text>
+                   </ImageBackground>
                    </View>
                </View>
         )
@@ -43,41 +54,39 @@ class Global extends React.Component{
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+        alignItems: 'stretch',
         position: 'relative'
     },
     box1: {
         flex: 1,
-        width: 100,
+        width: 300,
         height: 80,
-        backgroundColor: 'yellow',
         borderRadius: 20,
-        justifyContent: 'center',
         marginHorizontal: 10
     },
     box2: {
         flex: 1,
-        width: 100,
+        width: 300,
         height: 80,
         backgroundColor: 'lime',
         borderRadius: 20,
-        justifyContent: 'center',
         marginHorizontal: 10
     },
     box3: {
         flex: 1,
-        width: 100,
+        width: 300,
         height: 80,
         backgroundColor: 'red',
         borderRadius: 20,
-        justifyContent: 'center',
         marginHorizontal: 10
     },
     text: {
         color: 'black',
         fontSize: 20,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        fontFamily:'sans-serif-light'
     }
 })
 
